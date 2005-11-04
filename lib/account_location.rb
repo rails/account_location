@@ -43,4 +43,8 @@ module AccountLocation
       account_domain << request.subdomains[1..-1].join(".") + "." if request.subdomains.size > 1
       account_domain << request.domain + request.port_string
     end
+    
+    def account_subdomain
+      request.subdomains.first
+    end
 end
