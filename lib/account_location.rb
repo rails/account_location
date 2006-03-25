@@ -20,7 +20,7 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 module AccountLocation
   def self.included(controller)
-    controller.helper_method(:account_domain, :account_host, :account_url)
+    controller.helper_method(:account_domain, :account_subdomain, :account_host, :account_url)
   end
 
   protected

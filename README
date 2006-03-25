@@ -15,7 +15,7 @@ Example:
     
     protected
       def find_account
-        @account = Account.find_by_username(account_domain)
+        @account = Account.find_by_username(account_subdomain)
       end
   end
 
