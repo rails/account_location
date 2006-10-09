@@ -9,7 +9,7 @@ The methods are: account_url, account_host, and account_domain.
 
 Example:
 
-  class ApplicationController < ActiveRecord::Base
+  class ApplicationController < ActionController::Base
     include AccountLocation
     before_filter :find_account
     
