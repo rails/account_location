@@ -1,11 +1,22 @@
 module AccountLocation
   def self.included(controller)
-    controller.helper_method(:account_domain, :account_subdomain, :account_host, :account_url)
+    controller.helper_method(:account_domain, :account_subdomain, :account_host, :account_url,
+      :current_account)
   end
 
   protected
+  
+    def current_account
+      @current_account
+    end
+
+    def current_account=(account)
+      @current_account = account
+    end
+  
     def default_account_subdomain
-      @account.username if @account && @account.respond_to?(:username)
+      account = current_account || @account
+      account.username if account && account.respond_to?(:username)
     end
   
     def account_url(account_subdomain = default_account_subdomain, use_ssl = request.ssl?)
