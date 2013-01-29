@@ -5,7 +5,7 @@ $LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
 version = "1.0"
 
 Gem::Specification.new do |s|
-  s.name        = "account_location"
+  s.name        = "rails_account_location"
   s.version     = version
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["David Heinemeier Hansson"]
@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.files            = `git ls-files`.split("\n")
   s.test_files       = `git ls-files -- {spec}/*`.split("\n")
-  s.extra_rdoc_files = [ "README" ]
+  s.extra_rdoc_files = [ "README.md" ]
   s.rdoc_options     = ["--charset=UTF-8"]
   s.require_path     = "lib"
   
