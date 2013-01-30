@@ -2,7 +2,7 @@
 
 $LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
 
-version = "1.0"
+version = "1.0.1"
 
 Gem::Specification.new do |s|
   s.name        = "rails_account_location"
